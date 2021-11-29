@@ -9,7 +9,7 @@ invent = dict()
 while close:
     for k in invent:
         m = 0
-        print("Предмет: " + invent[k]['name'] + "\t Вес: " + str(invent[k]['ves']))
+        print("Предмет: " + invent[k]['name'] + "\tВес:" + str(invent[k]['ves']))
         if m > 0:
             print("\n")
         m += 1
@@ -28,13 +28,16 @@ while close:
             break
     else:  
         #invent.update(isName=ves)
-        prov_peregryz += ves
-        if pro_ves < prov_peregryz: 
+        if  prov_peregryz + ves <= pro_ves:
+            invent[i] = {'id': 100+i, 'name':name,'ves':ves}
+            i +=1
+            prov_peregryz += ves
+        else: 
             print("Перегруз!!")
             continue
         #print(prov_peregryz)
-        invent[i] = {'id': 100+i, 'name':name,'ves':ves}
-        i +=1
+        # invent[i] = {'id': 100+i, 'name':name,'ves':ves}
+        # i +=1
         #print(invent)
         delet = input("Хотите ли вы удалить предмет (Да/Нет): ")
         if delet == 'Да':
