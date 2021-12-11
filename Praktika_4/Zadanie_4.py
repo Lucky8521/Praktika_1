@@ -1,8 +1,8 @@
 from typing import *
 list_del = []
 close = True
-i =0
-m = 0
+i=0
+m=0
 prov_peregryz = 0
 pro_ves = 40
 invent = dict()
@@ -22,12 +22,14 @@ while close:
             break
         except ValueError:
             print("Введите число!!")
+    """Проверка на существующирй придмет"""
     for q in invent:
-        if invent[q]['name'] == name and invent[q]['ves'] == ves:
+        if (invent[q]['name'] == name and 
+            invent[q]['ves'] == ves):
             print("Такой предмет уже есть")
             break
     else:  
-        #invent.update(isName=ves)
+        '''Запись в инвентарь, проверка на заполняемость инвенторя'''
         if  prov_peregryz + ves <= pro_ves:
             invent[i] = {'id': 100+i, 'name':name,'ves':ves}
             i +=1
@@ -35,10 +37,6 @@ while close:
         else: 
             print("Перегруз!!")
             continue
-        #print(prov_peregryz)
-        # invent[i] = {'id': 100+i, 'name':name,'ves':ves}
-        # i +=1
-        #print(invent)
         delet = input("Хотите ли вы удалить предмет (Да/Нет): ")
         if delet == 'Да':
             name_del = input("Введите название предмета который хотите удалить: ")
