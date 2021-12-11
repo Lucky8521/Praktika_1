@@ -1,5 +1,6 @@
 import re
 import stdiomask
+"""Функция passwd(), проверка пароля"""
 def passwd(password):
         if len(password) < 6:
             print("Вы ввели пароль менее 6 символов! ")
