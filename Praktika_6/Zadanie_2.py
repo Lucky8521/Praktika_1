@@ -1,11 +1,12 @@
+el_C = 2
+el_H = 6
+el_O = 1
+"""Функция spirt, нахождения максимального числа малекула спирта"""
 def spirt():
     mas = dict()
     mas_1 = []
     element = 0
     l = 0
-    el_C = 2
-    el_H = 6
-    el_O = 1
     with open('input.txt', 'r') as input_file:
         for line in input_file:
             line = line.split(';')
@@ -27,4 +28,5 @@ def spirt():
         print(min(mas_1, key=lambda i: int(i)))
     output_file = open("Output.txt", "w")
     output_file.write(str(minimal) + "\n")
+    output_file.close()
 spirt()
