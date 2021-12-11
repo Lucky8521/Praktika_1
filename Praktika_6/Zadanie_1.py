@@ -1,6 +1,8 @@
+"""преобразованите в Байт код функция transform(obraz)"""
 def transform(obraz):
     b = bytes(obraz, 'utf-8')
     return b
+"""Функция декодирование в строку obrattrans(obraz)"""
 def obrattrans(obraz):
     a = (obraz.decode('utf-8'))
     return a
