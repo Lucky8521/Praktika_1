@@ -1,3 +1,4 @@
+"""Функция поиск фебоначи. kek()"""
 def kek(fibo):
     if fibo == 0:
         return 0
