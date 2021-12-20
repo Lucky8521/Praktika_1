@@ -3,10 +3,14 @@ import time
 def test(funk):
     def wrapped():    
        with open("Log.txt", "a", encoding='utf-8') as file:
+            '''Отметка времение, начала запуска funk'''
             tic = time.perf_counter()
             a_1 = funk()
+            '''Запись в файл'''
             file.write("\n" + str(a_1))
+            '''Отметка времение, конца запуска funk'''
             toc = time.perf_counter()
+            '''Вывод потраченного времени'''
             print(f'Вычисление заняло {toc - tic:0.6f} секунд')
             print("Ваш ответ записался в Log.txt!!!")
             time.sleep(5)
