@@ -15,30 +15,12 @@ def zero_koren(a,b,c):
 
 print ("решаем квадратное уравнение: a*x^2 +b*x + c=0")
 """Цикл для поиска дискриминанта"""
-while True:
-    try:
-        a =int(input("Введите перменную a: "))
-        break
-    except ValueError:
-            print('Неверный формат, введите целое число!')
-while True:
-    try:
-        b = int(input("Введите перменную b: "))
-        break
-    except ValueError:
-            print('Неверный формат, введите целое число!')
-while True:
-    try:
-        c = int(input("Введите перменную c: "))
-        break
-    except ValueError:
-            print('Неверный формат, введите целое число!')
-disc = discriminant(a,b,c)
+disc = discriminant(4,5,1)
 if disc > 0:
-    two_kor = koren(a,b,c)
+    two_kor = koren(4,5,1)
     print("Два корня: " + str(two_kor))
 elif disc == 0:
-    x_1 = one_koren(a, b)
+    x_1 = one_koren(4,5)
     print("Один корень: " + str(x_1))
 elif disc < 0:
     print("Корней нет!!")
